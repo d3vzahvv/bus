@@ -16,8 +16,9 @@
     '跨省跨县': 'route-card--regional'
   }[category] || 'route-card--other');
   const routeNameClass = name => {
+    if (/^龙之梦园区专线(?:二|三)?$/.test(name)) return ' route-name--extended route-name--long';
     if (!/\d/.test(name) && Array.from(name).length >= 8) return ' route-name--extended route-name--long';
-    return /^\d+路$/.test(name) ? '' : ' route-name--extended';
+    return /^(?=[A-Z0-9]*\d)[A-Z0-9]+路(?:支)?$/i.test(name) ? '' : ' route-name--extended';
   };
   const card = route => `<a class="route-card ${categoryClass(route.category)}" href="route.html?id=${encodeURIComponent(route.id)}" aria-label="查看${escapeHtml(route.name)}详情">
     <div class="route-card-top"><strong class="route-name${routeNameClass(route.name)}">${escapeHtml(route.name)}</strong></div>
