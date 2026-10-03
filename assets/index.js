@@ -22,7 +22,7 @@
   };
   const card = route => `<a class="route-card ${categoryClass(route.category)}" href="route.html?id=${encodeURIComponent(route.id)}" aria-label="查看${escapeHtml(route.name)}详情">
     <div class="route-card-top"><strong class="route-name${routeNameClass(route.name)}">${escapeHtml(route.name)}</strong></div>
-    <div class="route-card-bottom"><span class="direction-arrow" aria-hidden="true">↕</span><div><b>${escapeHtml(route.from)}</b><i></i><b>${escapeHtml(route.to)}</b></div></div>
+    <div class="route-card-bottom"><span class="direction-arrow" aria-hidden="true"><svg viewBox="0 0 16 24" focusable="false"><path d="M5 20V4m0 0L2 7m3-3 3 3m3-3v16m0 0-3-3m3 3 3-3"/></svg></span><div><b>${escapeHtml(route.from)}</b><i></i><b>${escapeHtml(route.to)}</b></div></div>
   </a>`;
   function render(query = '') {
     const key = query.trim().toLowerCase();
