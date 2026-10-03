@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="长兴公交全线路速查，查看官方线路方向、运营时间、票价及沿途站点。">
+  <meta name="theme-color" content="#f4f5f8">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="长兴公交线路">
+  <meta property="og:title" content="长兴公交线路">
+  <meta property="og:description" content="长兴公交官方线路、运营方向、班次与沿途站点速查。">
+  <meta property="og:image" content="assets/cover.jpg">
+  <meta property="og:image:alt" content="长兴公交线路网站分享封面">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="长兴公交线路">
+  <meta name="twitter:description" content="长兴公交官方线路、运营方向、班次与沿途站点速查。">
+  <meta name="twitter:image" content="assets/cover.jpg">
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <title>长兴公交线路</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/routes.js" defer></script>
+  <script src="assets/index.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="长兴公交首页">
+      <span><b>长兴公交</b><small>Changxing Bus</small></span>
+    </a>
+    <nav aria-label="主导航"><a class="active" href="index.html">线路</a><a href="#guide">乘车指南</a></nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="window-card page-intro">
+      <div class="intro-content">
+        <p class="eyebrow">CHANGXING · ZHEJIANG</p>
+        <h1>公交线路</h1>
+        <p>长兴公交官方线路与双向站点速查</p>
+      </div>
+    </section>
+
+    <section class="window-card routes-section" aria-labelledby="routes-title">
+      <div class="section-content">
+        <div class="section-heading">
+          <div><p class="eyebrow">OFFICIAL ROUTES</p><h2 id="routes-title">全部官方线路</h2></div>
+          <span id="route-count" class="count-pill"></span>
+        </div>
+        <div class="search-wrap">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg>
+          <label class="sr-only" for="route-search">搜索线路或站点</label>
+          <input id="route-search" type="search" placeholder="搜索线路、起讫站或途经站点" autocomplete="off">
+        </div>
+        <div id="route-grid" class="route-grid" aria-live="polite"></div>
+        <p id="empty-state" class="empty-state" hidden>没有找到匹配的线路</p>
+      </div>
+    </section>
+
+    <section id="guide" class="guide-grid" aria-label="乘车指南">
+      <article><span>¥</span><div><h2>统一票价</h2><p>无人售票，全程 2 元一票制</p></div></article>
+      <article><span>◷</span><div><h2>运营提示</h2><p>冬令时部分线路末班时间会提前</p></div></article>
+      <article><span>⌁</span><div><h2>实时公交</h2><p>请使用“长兴智慧交通”查询实时到站</p></div></article>
+    </section>
+  </main>
+
+  <footer><p>项目参考 <a href="https://toursline.cn/">通行线</a> 和 <a href="https://www.china-emu.cn/">China EMU</a></p><p>线路资料仅供参考，请以现场站牌及运营方公告为准</p><p>公交咨询：0572-6207776</p></footer>
+</body>
+</html>
